@@ -45,11 +45,17 @@ Not yet implemented:
 ## 🏗️ Architecture (High Level)
 
 UI (Visual Builder)
+
         ↓
+        
 Flow JSON Definition
+
         ↓
+        
 Go Execution Engine
+
         ↓
+        
 Integration Runtime
 
 ## 📌 Goals
