@@ -1,0 +1,52 @@
+{
+  "id": "flow-hello",
+  "name": "Hello FlowForge",
+  "version": "1.0",
+  "nodes": [
+    {
+      "id": "node-1",
+      "type": "http_trigger",
+      "name": "HTTP Trigger",
+      "position": { "x": 100, "y": 200 },
+      "config": {
+        "path": "/webhook",
+        "method": "POST"
+      }
+    },
+    {
+      "id": "node-2",
+      "type": "transform",
+      "name": "Transform Data",
+      "position": { "x": 400, "y": 200 },
+      "config": {
+        "expression": "{ greeting: 'hello ' + input.body.name }"
+      }
+    },
+    {
+      "id": "node-3",
+      "type": "log",
+      "name": "Log Output",
+      "position": { "x": 700, "y": 200 },
+      "config": {
+        "level": "info"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-1",
+      "source": "node-1",
+      "target": "node-2"
+    },
+    {
+      "id": "edge-2",
+      "source": "node-2",
+      "target": "node-3"
+    }
+  ],
+  "metadata": {
+    "createdAt": "2026-05-23T00:00:00Z",
+    "updatedAt": "2026-05-23T00:00:00Z",
+    "author": "flowforge"
+  }
+}
